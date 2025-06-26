@@ -106,7 +106,7 @@ function tampilkanDaftarBelanja() {
                     <span>${barang.jumlah}</span>
                     <button onclick="tambahKeTotal(${index})">+</button>
                 </span>
-                <button class="hapus-barang-btn" onclick="hapusBarang(${index})">Hapus</button>
+                <button class="hapus-btn" onclick="hapusBarang(${index})">Hapus</button>
             </div>
             `;
 
