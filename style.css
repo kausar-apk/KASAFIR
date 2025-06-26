@@ -163,20 +163,36 @@ button:hover {
 
 #daftarBelanja li {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1.5fr auto;
+  grid-template-columns: 1.2fr 1fr 1.3fr auto;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 13px;
+  gap: 7px;
+  margin-bottom: 12px;
   background: #f5e9c8;
-  padding: 8px 12px;
+  padding: 7px 8px;
   border-radius: 7px;
-  font-size: 1.06rem;
+  font-size: 1rem;
   box-shadow: 0 1px 4px #ad974017;
+  min-width: 0;
 }
 
 #daftarBelanja li span,
 #daftarBelanja li .jumlah-control {
   min-width: 0; 
+}
+
+@media (max-width: 480px) {
+  #daftarBelanja li {
+    grid-template-columns: 1fr 1.1fr;
+    grid-template-rows: auto auto;
+    font-size: 0.97rem;
+    padding: 6px 5px;
+  }
+  #daftarBelanja li span.jumlah-control,
+  #daftarBelanja li button {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-top: 4px;
+  }
 }
 
 .top-actions {
@@ -248,25 +264,6 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 4px;
-}
-
-#daftarBelanja button,
-#daftarBelanja .hapus-btn {
-  background: #b0caa0;
-  color: #2e3b22;
-  border: none;
-  border-radius: 6px;
-  padding: 6px 14px;
-  margin: 0 3px;
-  font-size: 1.03rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.17s, color 0.13s;
-}
-#daftarBelanja button:hover,
-#daftarBelanja .hapus-btn:hover {
-  background: #497154;
-  color: #fffbe8;
 }
 
 .form-tambah-barang {
@@ -387,20 +384,6 @@ button:hover {
   background: #e2b974;
   color: #497154;
 }
-.hapus-btn {
-  background: #e57373;
-  color: #fffbe8;
-  border: none;
-  border-radius: 6px;
-  padding: 6px 18px;
-  font-size: 1rem;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background 0.16s, color 0.16s;
-}
-.hapus-btn:hover {
-  background: #b71c1c;
-}
 
 /* Tabel barang di halaman Edit Nota */
 .tabel-edit-barang {
@@ -457,7 +440,7 @@ button:hover {
   border: none;
   border-radius: 7px;
   padding: 5px 16px;
-  font-size: 1.01rem;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.15s;
