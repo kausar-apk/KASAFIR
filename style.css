@@ -532,3 +532,25 @@ button:hover {
   }
 }
 
+.katalog-barang-btn {
+  display: inline-block;
+  margin: 6px 6px 4px 0;
+  padding: 6px 10px;
+  font-size: 0.92rem;
+  background: #cfe9bc;
+  color: #2e3b22;
+  border: 1px solid #e2b974;
+  border-radius: 6px;
+  white-space: nowrap;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+@media (max-width: 500px) {
+  .katalog-barang-btn {
+    font-size: 0.85rem;
+    padding: 6px 9px;
+    white-space: normal;
+    width: fit-content;
+  }
+}
