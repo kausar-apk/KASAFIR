@@ -550,3 +550,42 @@ button:hover {
     margin-top: 5px;
   }
 }
+
+.katalog-tombol-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.katalog-tombol-group button {
+  background: #b0caa0;
+  color: #2e3b22;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 4px;
+  transition: background 0.15s, color 0.13s;
+}
+
+.katalog-tombol-group button:hover {
+  background: #497154;
+  color: #fffbe8;
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 540px) {
+  .katalog-tombol-group button {
+    flex: 1 1 45%;
+    min-width: 120px;
+    max-width: 100%;
+    font-size: 0.97rem;
+    padding: 8px 0;
+  }
+  .katalog-tombol-group {
+    gap: 6px;
+  }
+}
