@@ -514,8 +514,9 @@ button:hover {
 }
 
 #katalogEditNota button {
-  flex: 0 1 calc(50% - 10px); 
-  min-width: 0;
+  flex: 1 1 calc(50% - 10px); 
+  min-width: 120%;
+  max-width: 100%;
   font-size: 0.85rem;
   padding: 6px 10px;
   border: 1px solid #e2b974;
@@ -526,13 +527,16 @@ button:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 38px;
 }
 
 @media (max-width: 500px) {
   #katalogEditNota button {
     flex: 0 1 calc(50% - 8px);
     font-size: 0.8rem;
-    padding: 5px 9px;
+    padding: 6px 9px;
+    height: 36px;
+    min-width: 120px;
   }
 }
 
