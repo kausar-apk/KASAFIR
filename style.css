@@ -543,9 +543,10 @@ button:hover {
     gap: 8px;
   }
   .bawah-edit .hapus-barang-btn {
-    flex-basis: 20%;
+    flex-basis: auto;
+    width: max-content;
     align-self: flex-end;
-    margin-left: 0;
+    margin-left: auto;
     margin-top: 5px;
   }
 }
