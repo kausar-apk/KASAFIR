@@ -503,17 +503,29 @@ button:hover {
     text-align: right;
   }
   .hapus-barang-btn {
-    margin-left: 0;
-    margin-top: 5px;
-    width: 100%;
+    background: #e57373;
+    color: #fffbe8;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 16px;
+    margin-left: auto;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .hapus-barang-btn:hover {
+    background: #b71c1c;
+  }
+
+  .bawah-edit .hapus-barang-btn {
+    margin-left: auto;
+    margin-top: 0;
     align-self: flex-end;
     font-size: 0.97rem;
-    padding: 6px 0;
-  }
-  .bawah-edit {
-    justify-content: flex-start;
-    gap: 8px;
-    margin-top: 3px;
+    padding: 6px 16px;
+    width: auto;
   }
   .edit-barang-card {
     padding: 8px 7px 10px 7px;
