@@ -337,6 +337,7 @@ function tampilkanKatalogEdit() {
         kelompok[kategori].forEach((barang) => {
             let btn = document.createElement("button");
             btn.textContent = `${barang.nama} (+)`;
+            btn.className = "katalog-barang-btn";
             btn.onclick = function() {
                 tambahBarangBaruKeEditNota(barang);
             };
