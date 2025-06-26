@@ -256,12 +256,12 @@ function tampilkanEditDaftarBelanja() {
   let html = '';
   editBarang.forEach((item, i) => {
     html += `
-      <div class="edit-item">
-        <div class="edit-barang-nama">
-          <span class="nama-barang">${item.nama}</span>
-          <span class="harga-barang">= Rp${item.harga * item.jumlah}</span>
+      <div class="edit-barang-card">
+        <div class="atas-edit">
+          <span class="nama-barang-edit">${item.nama}</span>
+          <span class="harga-barang-edit">= Rp${item.harga * item.jumlah}</span>
         </div>
-        <div class="edit-barang-actions">
+        <div class="bawah-edit">
           <button class="edit-qty-btn" onclick="kurangiEditBarang(${i})">-</button>
           <span class="jumlah-barang">${item.jumlah}</span>
           <button class="edit-qty-btn" onclick="tambahEditBarang(${i})">+</button>
