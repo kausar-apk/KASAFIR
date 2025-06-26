@@ -508,27 +508,27 @@ button:hover {
 #katalogEditNota {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 15px;
-  margin-bottom: 8px;
+  gap: 8px;
+  justify-content: flex-start;
+  margin-top: 10px;
 }
 
 #katalogEditNota button {
-  flex: 1 1 130px;
-  min-width: 100px;
-  padding: 8px 12px;
-  font-size: 1rem;
+  flex: 0 1 calc(50% - 10px); 
+  min-width: 0;
+  font-size: 0.92rem;
+  padding: 6px 10px;
   box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 600px) {
-  #katalogEditNota {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
   #katalogEditNota button {
-    width: 100%;
+    flex: 0 1 calc(50% - 10px);
+    font-size: 0.85rem;
+    padding: 5px 8px;
   }
 }
 
