@@ -254,26 +254,19 @@ function tampilkanEditDaftarBelanja() {
     container.innerHTML = '<div style="text-align:center;color:#c99;">Tidak ada barang</div>';
     return;
   }
-  let html = `
-    <table class="tabel-edit-barang"><tbody>
-  `;
-  editBarang.forEach((item, i) => {
-    html += `
-      <tr>
-        <td class="nama-barang">${item.nama}</td>
-        <td>
-          <button class="edit-qty-btn" onclick="kurangiEditJumlah(${i})">-</button>
-          <span class="jumlah-barang">${item.jumlah}</span>
-          <button class="edit-qty-btn" onclick="tambahEditJumlah(${i})">+</button>
-        </td>
-        <td class="harga-barang">= Rp${item.harga * item.jumlah}</td>
-        <td>
-          <button class="hapus-barang-btn" onclick="hapusEditBarang(${i})">Hapus</button>
-        </td>
-      </tr>
-    `;
-  });
-  html += `</tbody></table>`;
+
+  let html = editBarang.map((item, i) => `
+    <li class="edit-barang-row">
+      <span class="nama-barang">${item.nama}</span>
+      <span class="jumlah-control">
+        <button class="edit-qty-btn" onclick="kurangiEditJumlah(${i})">-</button>
+        <span class="jumlah-barang">${item.jumlah}</span>
+        <button class="edit-qty-btn" onclick="tambahEditJumlah(${i})">+</button>
+      </span>
+      <span class="harga-barang">= Rp${item.harga * item.jumlah}</span>
+      <button class="hapus-barang-btn" onclick="hapusEditBarang(${i})">Hapus</button>
+    </li>
+  `).join('');
   container.innerHTML = html;
 }
 
