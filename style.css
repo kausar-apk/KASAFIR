@@ -562,36 +562,21 @@ button:hover {
   gap: 8px;
   margin-bottom: 14px;
 }
-
 .katalog-tombol-group button {
-  background: #b0caa0;
-  color: #2e3b22;
-  border: none;
-  border-radius: 7px;
-  padding: 8px 15px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.15s, color 0.13s;
-  margin-bottom: 4px;
-  /* Tambahan supaya grow rapi */
   flex: 1 1 140px;
   min-width: 110px;
   max-width: 100%;
-  box-sizing: border-box;
+  margin-bottom: 4px;
 }
-
-/* Responsive untuk mobile */
 @media (max-width: 540px) {
-  .katalog-tombol-group {
-    gap: 6px;
-  }
   .katalog-tombol-group button {
     flex: 1 1 48%;
     min-width: 90px;
-    max-width: 100%;
     font-size: 0.97rem;
     padding: 10px 0;
     margin-bottom: 0;
+  }
+  .katalog-tombol-group {
+    gap: 6px;
   }
 }
