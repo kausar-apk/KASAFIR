@@ -454,10 +454,18 @@ button:hover {
 .bawah-edit {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 7px;
-  margin-top: 1px;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 3px;
+  flex-wrap: wrap;
+  position: relative;   
 }
+
+.bawah-edit .hapus-barang-btn {
+  margin-left: auto;
+  min-width: 90px;      
+}
+
 .edit-qty-btn {
   background: #b0caa0;
   color: #2e3b22;
@@ -529,5 +537,17 @@ button:hover {
   }
   .edit-barang-card {
     padding: 8px 7px 10px 7px;
+  }
+
+   .bawah-edit {
+    width: 100%;
+    gap: 8px;
+  }
+  .bawah-edit .hapus-barang-btn {
+    /* Trik: Tombol hapus dipaksa turun ke bawah dengan flex-basis dan align-self */
+    flex-basis: 100%;
+    align-self: flex-end;
+    margin-left: 0;
+    margin-top: 5px;
   }
 }
