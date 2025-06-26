@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <title>Kalkulator Belanja</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#497154">
+        <link rel="icon" type="image/png" href="img/icon-mangga.png" sizes="32x32">
+        <link rel="apple-touch-icon" href="img/icon-mangga.png" sizes="180x180">
+        <link rel="shortcut icon" href="img/icon-mangga.png">
+
+    </head>
+    <body>
+
+        <nav id="top-nav">
+            <img src="img/outline-logo-mangga.png" alt="Logo Mangga" class="logo-mangga">
+            <span>KASAFIR</span>
+            
+        </nav>
+
+        <div id="halamanUtama">
+
+            <div id="halaman-belanja" class="halaman">
+                <h2>Daftar Barang</h2>
+                <div class="top-actions">
+                    <select  id="filterKategori" onchange="filterKategoriBarang()">
+                        <option value="">-- Semua Kategori --</option>
+                        <option value="Saripati Buah">Saripati Buah</option>
+                        <option value="Jus Buah">Jus Buah</option>
+                    </select>
+
+                    <button onclick="toggleModeHapusBarang()" id="btnModeHapusBarang">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+
+                <ul id="daftarBarang"></ul>
+
+                <h2>Daftar Belanja:</h2>
+                <ul id="daftarBelanja"></ul>
+
+                <h2>Total: <span id="totalHarga">0</span></h2>
+
+                 <input type="text" id="namaPelanggan" placeholder="Nama Pelanggan">
+                 <button onclick="simpanTransaksi()">Simpan Transaksi</button>
+
+            </div>
+
+            <div id="halaman-tambah" class="halaman" style="display:none">
+                <h2>Tambah Barang Baru</h2>
+                <form class="form-tambah-barang" onsubmit="tambahBarang(); return false">
+                    <input type="text" id="namaBarang" placeholder="Nama Barang" required>
+                    <input type="number" id="hargaBarang" placeholder="Harga" required>
+
+                    <select id="kategoriBarang" required>
+                        <option value="">-- Pilih Kategori --</option>
+                        <option value="Saripati Buah">Saripati Buah</option>
+                        <option value="Jus Buah">Jus Buah</option>
+                    </select>
+
+                <button type="submit">Tambah</button>
+                </form>
+            </div>
+
+            <div id="halaman-edit" class="halaman" style="display: none">
+                <h2>Edit Nota</h2>
+                <input type="text" id="editNamaPelanggan" placeholder="Nama Pelanggan">
+                <ul id="editDaftarBelanja"></ul>
+                <div id="katalogEditNota"></div>
+                <h2>Total: <span id="editTotalHarga">0</span></h2>
+                <button onclick="simpanEditTransaksi()">Simpan Perubahan</button>
+                <button onclick="tampilkanHalaman('riwayat')">Batal</button>
+            </div>
+
+            <div id="halaman-riwayat" class="halaman" style="display: none;">
+                <h2>Riwayat Transaksi</h2>
+                <div id="riwayatTransaksi"></div>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+
+        <nav id="bottom-nav">
+            <button onclick="tampilkanHalaman('belanja')" title="Belanja">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </button>
+            <button onclick="tampilkanHalaman('tambah')" title="Tambah Barang">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <button onclick="tampilkanHalaman('riwayat')" title="Riwayat">
+                <i class="fa-solid fa-clipboard-list"></i>
+            </button>
+        </nav>
+
+    </body>
+</html>
