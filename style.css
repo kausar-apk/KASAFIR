@@ -28,7 +28,7 @@ body {
 }
 
 #top-nav span {
-  color: #f5e9c8;    /* krem terang, kontras dengan hijau */
+  color: #f5e9c8;    
   font-family: 'Merriweather', 'Georgia', serif;
   font-size: 1.43rem;
   letter-spacing: 2px;
@@ -85,7 +85,6 @@ body {
   align-items: center;
 }
 
-/* Responsive: untuk HP, sidebar tetap di atas */
 @media (max-width: 700px) {
   body {
     flex-direction: column;
@@ -393,14 +392,12 @@ button:hover {
   color: #497154;
 }
 
-/* Tabel barang di halaman Edit Nota */
 #editDaftarBelanja {
   list-style: none;
   padding: 0;
   margin: 14px 0 18px 0;
 }
 
-/* Responsive EDIT NOTA */
 .edit-barang-card {
   background: #fffbe8;
   border: 1.2px solid #e2b974;
@@ -547,30 +544,5 @@ button:hover {
     align-self: flex-end;
     margin-left: auto;
     margin-top: 5px;
-  }
-}
-
-.katalog-tombol-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 14px;
-}
-.katalog-tombol-group button {
-  flex: 1 1 140px;
-  min-width: 110px;
-  max-width: 100%;
-  margin-bottom: 4px;
-}
-@media (max-width: 540px) {
-  .katalog-tombol-group button {
-    flex: 1 1 48%;
-    min-width: 90px;
-    font-size: 0.97rem;
-    padding: 10px 0;
-    margin-bottom: 0;
-  }
-  .katalog-tombol-group {
-    gap: 6px;
   }
 }
