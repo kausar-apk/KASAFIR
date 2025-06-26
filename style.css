@@ -532,7 +532,7 @@ button:hover {
     align-self: flex-end;
     font-size: 0.97rem;
     padding: 6px 16px;
-    width: auto;
+    width: 20px;
   }
   .edit-barang-card {
     padding: 8px 7px 10px 7px;
