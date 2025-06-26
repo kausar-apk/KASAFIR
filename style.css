@@ -400,51 +400,52 @@ button:hover {
   margin: 14px 0 18px 0;
 }
 
+/* Responsive EDIT NOTA */
 .edit-barang-card {
   background: #fffbe8;
   border: 1.2px solid #e2b974;
   border-radius: 8px;
   margin-bottom: 10px;
-  padding: 8px 10px 10px 12px;
+  padding: 10px 10px 12px 10px;
   box-shadow: 0 1px 4px #ad974017;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 7px;
 }
 .atas-edit {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  margin-bottom: 3px;
 }
 .nama-barang-edit {
   font-weight: 500;
   color: #497154;
-  min-width: 60px;
-  flex: 1 1 60px;
+  flex: 1 1 70px;
   margin-right: 8px;
   word-break: break-word;
+  min-width: 0;
 }
 .harga-barang-edit {
   color: #784421;
   font-family: 'Merriweather', Georgia, serif;
-  min-width: 100px;
-  margin-right: 8px;
+  min-width: 82px;
   text-align: right;
   font-size: 0.97rem;
+  margin-right: 8px;
 }
 .hapus-barang-btn {
   background: #e57373;
   color: #fffbe8;
   border: none;
   border-radius: 7px;
-  padding: 5px 13px;
+  padding: 5px 14px;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.15s;
+  margin-left: auto;
 }
 .hapus-barang-btn:hover {
   background: #b71c1c;
@@ -453,16 +454,16 @@ button:hover {
 .bawah-edit {
   display: flex;
   align-items: center;
-  gap: 9px;
-  margin-top: 2px;
-  margin-left: 2px;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 1px;
 }
 .edit-qty-btn {
   background: #b0caa0;
   color: #2e3b22;
   border: none;
   border-radius: 5px;
-  padding: 3px 12px;
+  padding: 4px 12px;
   font-size: 1.05rem;
   font-weight: bold;
   cursor: pointer;
@@ -477,26 +478,44 @@ button:hover {
   min-width: 26px;
   text-align: center;
   font-weight: bold;
-  font-size: 1.07rem;
+  font-size: 1.08rem;
 }
 
-@media (max-width: 500px) {
-  .edit-barang-card {
-    padding: 7px 4px 8px 8px;
-    font-size: 0.97rem;
-  }
+/* MOBILE: 2 BARIS per barang, tombol hapus pindah ke bawah kanan */
+@media (max-width: 600px) {
   .atas-edit {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 2px;
+    margin-bottom: 0;
+  }
+  .nama-barang-edit {
+    min-width: 0;
+    font-size: 1.01rem;
+    margin-right: 4px;
   }
   .harga-barang-edit {
     min-width: 0;
     margin-right: 0;
-    text-align: left;
+    font-size: 0.97rem;
+    flex: 1;
+    text-align: right;
+  }
+  .hapus-barang-btn {
+    margin-left: 0;
+    margin-top: 5px;
+    width: 100%;
+    align-self: flex-end;
+    font-size: 0.97rem;
+    padding: 6px 0;
   }
   .bawah-edit {
-    gap: 7px;
-    margin-top: 2px;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-top: 3px;
+  }
+  .edit-barang-card {
+    padding: 8px 7px 10px 7px;
   }
 }
