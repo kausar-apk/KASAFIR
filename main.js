@@ -254,26 +254,23 @@ function tampilkanEditDaftarBelanja() {
     container.innerHTML = '<div style="text-align:center;color:#c99;">Tidak ada barang</div>';
     return;
   }
-  let html = `
-    <table class="tabel-edit-barang"><tbody>
-  `;
+  let html = '';
   editBarang.forEach((item, i) => {
     html += `
-      <tr>
-        <td class="nama-barang">${item.nama}</td>
-        <td>
+      <div class="edit-barang-card">
+        <div class="atas-edit">
+          <span class="nama-barang-edit">${item.nama}</span>
+          <span class="harga-barang-edit">= Rp${item.harga * item.jumlah}</span>
+          <button class="hapus-barang-btn" onclick="hapusEditBarang(${i})">Hapus</button>
+        </div>
+        <div class="bawah-edit">
           <button class="edit-qty-btn" onclick="kurangiEditBarang(${i})">-</button>
           <span class="jumlah-barang">${item.jumlah}</span>
           <button class="edit-qty-btn" onclick="tambahEditBarang(${i})">+</button>
-        </td>
-        <td class="harga-barang">= Rp${item.harga * item.jumlah}</td>
-        <td>
-          <button class="hapus-barang-btn" onclick="hapusEditBarang(${i})">Hapus</button>
-        </td>
-      </tr>
+        </div>
+      </div>
     `;
   });
-  html += `</tbody></table>`;
   container.innerHTML = html;
 }
 
