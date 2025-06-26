@@ -510,6 +510,7 @@ button:hover {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 15px;
+  margin-bottom: 8px;
 }
 
 #katalogEditNota button {
