@@ -100,13 +100,13 @@ function tampilkanDaftarBelanja() {
                 <span class="nama-barang">${barang.nama}</span>
                 <span class="harga-barang">= Rp${barang.harga * barang.jumlah}</span>
             </div>
-            <div class="bawah>
+            <div class="bawah">
                 <span class="jumlah-control">
                     <button onclick="kurangiBarang(${index})">-</button>
                     <span>${barang.jumlah}</span>
                     <button onclick="tambahKeTotal(${index})">+</button>
                 </span>
-                <button class"hapus-barang-btn" onclick="hapusBarang(${index})">Hapus</button>
+                <button class="hapus-barang-btn" onclick="hapusBarang(${index})">Hapus</button>
             </div>
             `;
 
