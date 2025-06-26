@@ -162,22 +162,31 @@ button:hover {
 }
 
 #daftarBelanja li {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1.3fr auto;
-  align-items: center;
-  gap: 7px;
-  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   background: #f5e9c8;
-  padding: 7px 8px;
   border-radius: 7px;
-  font-size: 1rem;
+  margin-bottom: 12px;
+  padding: 7px 8px;
   box-shadow: 0 1px 4px #ad974017;
-  min-width: 0;
+  font-size: 1rem;
 }
 
-#daftarBelanja li span,
-#daftarBelanja li .jumlah-control {
-  min-width: 0; 
+#daftarBelanja li .atas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#daftarBelanja li .bawah {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#daftarBelanja li .bawah .hapus-btn {
+  margin-left: auto;
 }
 
 @media (max-width: 480px) {
