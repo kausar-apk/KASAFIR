@@ -250,22 +250,31 @@ function editTransaksi(index) {
 
 function tampilkanEditDaftarBelanja() {
   let container = document.getElementById('editDaftarBelanja');
-  container.innerHTML = '';
+  if (!editBarang.length) {
+    container.innerHTML = '<div style="text-align:center;color:#c99;">Tidak ada barang</div>';
+    return;
+  }
+  let html = `
+    <table class="tabel-edit-barang"><tbody>
+  `;
   editBarang.forEach((item, i) => {
-    let li = document.createElement('li');
-    li.className = 'edit-barang-row';
-    li.innerHTML = `
-      <span class="nama-barang">${item.nama}</span>
-      <div class="edit-control">
-        <button onclick="kurangiEditBarang(${i})" class="edit-qty-btn">-</button>
-        <span class="jumlah-barang">${item.jumlah}</span>
-        <button onclick="tambahEditBarang(${i})" class="edit-qty-btn">+</button>
-      </div>
-      <span class="harga-barang">= Rp${item.harga * item.jumlah}</span>
-      <button onclick="hapusEditBarang(${i})" class="hapus-barang-btn">Hapus</button>
+    html += `
+      <tr>
+        <td class="nama-barang">${item.nama}</td>
+        <td>
+          <button class="edit-qty-btn" onclick="kurangiEditBarang(${i})">-</button>
+          <span class="jumlah-barang">${item.jumlah}</span>
+          <button class="edit-qty-btn" onclick="tambahEditBarang(${i})">+</button>
+        </td>
+        <td class="harga-barang">= Rp${item.harga * item.jumlah}</td>
+        <td>
+          <button class="hapus-barang-btn" onclick="hapusEditBarang(${i})">Hapus</button>
+        </td>
+      </tr>
     `;
-    container.appendChild(li);
   });
+  html += `</tbody></table>`;
+  container.innerHTML = html;
 }
 
 function tambahEditBarang(idx) {
