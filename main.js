@@ -142,17 +142,6 @@ function hapusBarang(index) {
     tampilkanDaftarBelanja();
 }
 
-function tampilkanHalaman(nama) {
-    document.getElementById("halaman-belanja").style.display = (nama === "belanja") ? "block" : "none";
-    document.getElementById("halaman-tambah").style.display = (nama === "tambah") ? "block" : "none";
-    document.getElementById("halaman-edit").style.display = (nama === "edit") ? "block" : "none";
-
-    if (nama === "belanja") {
-        tampilkanBarang();
-        tampilkanDaftarBelanja();
-    }
-}
-
 function simpanTransaksi() {
     let nama = document.getElementById("namaPelanggan").value;
 
@@ -275,8 +264,8 @@ function tampilkanEditDaftarBelanja() {
 
 function tambahEditBarang(idx) {
     editBarang[idx].jumlah++;
-    
     tampilkanEditDaftarBelanja();
+    document.getElementById('editTotalHarga').innerText = hitungTotalEdit();
 }
 
 function kurangiEditBarang(idx) {
@@ -286,6 +275,7 @@ function kurangiEditBarang(idx) {
         editBarang.splice(idx, 1);
     }
     tampilkanEditDaftarBelanja();
+    document.getElementById('editTotalHarga').innerText = hitungTotalEdit();
 }
 
 function hapusEditBarang(idx) {
