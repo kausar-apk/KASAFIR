@@ -250,26 +250,23 @@ function editTransaksi(index) {
 
 function tampilkanEditDaftarBelanja() {
   let container = document.getElementById('editDaftarBelanja');
-  if (!editBarang.length) {
-    container.innerHTML = '<div style="text-align:center;color:#c99;">Tidak ada barang</div>';
-    return;
-  }
-
-  let html = editBarang.map((item, i) => `
-    <li class="edit-barang-row">
+  container.innerHTML = '';
+  editBarang.forEach((item, i) => {
+    let li = document.createElement('li');
+    li.className = 'edit-barang-row';
+    li.innerHTML = `
       <span class="nama-barang">${item.nama}</span>
-      <span class="jumlah-control">
-        <button class="edit-qty-btn" onclick="kurangiEditJumlah(${i})">-</button>
+      <div class="edit-control">
+        <button onclick="kurangiEditBarang(${i})" class="edit-qty-btn">-</button>
         <span class="jumlah-barang">${item.jumlah}</span>
-        <button class="edit-qty-btn" onclick="tambahEditJumlah(${i})">+</button>
-      </span>
+        <button onclick="tambahEditBarang(${i})" class="edit-qty-btn">+</button>
+      </div>
       <span class="harga-barang">= Rp${item.harga * item.jumlah}</span>
-      <button class="hapus-barang-btn" onclick="hapusEditBarang(${i})">Hapus</button>
-    </li>
-  `).join('');
-  container.innerHTML = html;
+      <button onclick="hapusEditBarang(${i})" class="hapus-barang-btn">Hapus</button>
+    `;
+    container.appendChild(li);
+  });
 }
-
 
 function tambahEditBarang(idx) {
     editBarang[idx].jumlah++;
