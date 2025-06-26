@@ -400,120 +400,47 @@ button:hover {
   margin: 14px 0 18px 0;
 }
 
-.edit-barang-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.edit-barang-card {
   background: #fffbe8;
-  border-radius: 7px;
-  margin-bottom: 11px;
-  padding: 7px 8px;
-}
-
-.edit-barang-row .nama-barang {
-  font-weight: 500;
-  color: #497154;
-  min-width: 70px;
-  flex: 1;
-}
-
-.edit-barang-row .jumlah-control {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  justify-content: center;
-}
-
-.edit-barang-row .edit-qty-btn {
-  background: #b0caa0;
-  color: #2e3b22;
-  border: none;
-  border-radius: 5px;
-  width: 34px;
-  height: 34px;
-  font-size: 1.11rem;
-  cursor: pointer;
-  transition: background 0.12s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.edit-barang-row .edit-qty-btn:hover {
-  background: #497154;
-  color: #fffbe8;
-}
-
-.edit-barang-row .jumlah-barang {
-  display: inline-block;
-  width: 30px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.15rem;
-}
-
-.edit-barang-row .harga-barang {
-  min-width: 80px;
-  text-align: right;
-  flex: 1;
-}
-
-.edit-barang-row .hapus-barang-btn {
-  background: #e57373;
-  color: #fffbe8;
-  border: none;
-  border-radius: 7px;
-  padding: 6px 15px;
+  border: 1.2px solid #e2b974;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 8px 10px 10px 12px;
+  box-shadow: 0 1px 4px #ad974017;
   font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  margin-left: 12px;
-  transition: background 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-.edit-barang-row .hapus-barang-btn:hover {
-  background: #b71c1c;
+.atas-edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 3px;
 }
-
-.nama-barang {
+.nama-barang-edit {
   font-weight: 500;
-  min-width: 90px;
   color: #497154;
+  min-width: 60px;
+  flex: 1 1 60px;
+  margin-right: 8px;
+  word-break: break-word;
 }
-
-.edit-qty-btn {
-  background: #b0caa0;
-  color: #2e3b22;
-  border: none;
-  border-radius: 5px;
-  padding: 4px 11px;
-  font-size: 1.05rem;
-  margin: 0 3px;
-  cursor: pointer;
-  transition: background 0.12s;
-}
-.edit-qty-btn:hover {
-  background: #497154;
-  color: #fffbe8;
-}
-
-.jumlah-barang {
-  display: inline-block;
-  width: 26px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.harga-barang {
+.harga-barang-edit {
+  color: #784421;
   font-family: 'Merriweather', Georgia, serif;
-  min-width: 105px;
+  min-width: 100px;
+  margin-right: 8px;
+  text-align: right;
+  font-size: 0.97rem;
 }
-
 .hapus-barang-btn {
   background: #e57373;
   color: #fffbe8;
   border: none;
   border-radius: 7px;
-  padding: 5px 16px;
+  padding: 5px 13px;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
@@ -523,14 +450,53 @@ button:hover {
   background: #b71c1c;
   color: #fffbe8;
 }
-
-@media (max-width: 500px) {
-  .edit-barang-row {
-    flex-wrap: wrap;
-    font-size: 0.99rem;
-    padding: 6px 4px;
-  }
-  .edit-barang-row .harga-barang { min-width: 60px; }
-  .edit-barang-row .hapus-barang-btn { padding: 4px 8px; margin-left: 8px; }
+.bawah-edit {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+.edit-qty-btn {
+  background: #b0caa0;
+  color: #2e3b22;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 12px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.edit-qty-btn:hover {
+  background: #497154;
+  color: #fffbe8;
+}
+.jumlah-barang {
+  display: inline-block;
+  min-width: 26px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.07rem;
 }
 
+@media (max-width: 500px) {
+  .edit-barang-card {
+    padding: 7px 4px 8px 8px;
+    font-size: 0.97rem;
+  }
+  .atas-edit {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .harga-barang-edit {
+    min-width: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+  .bawah-edit {
+    gap: 7px;
+    margin-top: 2px;
+  }
+}
