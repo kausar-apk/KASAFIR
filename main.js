@@ -96,14 +96,18 @@ function tampilkanDaftarBelanja() {
             let item = document.createElement("li");
 
             item.innerHTML = `
-            <span>${barang.nama}</span>
-            <span class="jumlah-control">
-                <button onclick="kurangiBarang(${index})">-</button>
-                <span>${barang.jumlah}</span>
-                <button onclick="tambahKeTotal(${index})">+</button>
-            </span>
-            <span>= Rp${barang.harga * barang.jumlah}</span>
-            <button onclick="hapusBarang(${index})">Hapus</button>
+            <div class="atas">
+                <span class="nama-barang">${barang.nama}</span>
+                <span class="harga-barang">= Rp${barang.harga * barang.jumlah}</span>
+            </div>
+            <div class="bawah>
+                <span class="jumlah-control">
+                    <button onclick="kurangiBarang(${index})">-</button>
+                    <span>${barang.jumlah}</span>
+                    <button onclick="tambahKeTotal(${index})">+</button>
+                </span>
+                <button class"hapus-barang-btn" onclick="hapusBarang(${index})">Hapus</button>
+            </div>
             `;
 
             list.appendChild(item);
