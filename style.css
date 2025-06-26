@@ -190,17 +190,15 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-  #daftarBelanja li {
-    grid-template-columns: 1fr 1.1fr;
-    grid-template-rows: auto auto;
-    font-size: 0.97rem;
-    padding: 6px 5px;
+  #daftarBelanja li .atas,
+  #daftarBelanja li .bawah {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
   }
-  #daftarBelanja li span.jumlah-control,
-  #daftarBelanja li button {
-    grid-column: 1 / -1;
-    justify-self: start;
-    margin-top: 4px;
+  #daftarBelanja li .bawah .hapus-btn {
+    margin-left: 0;
+    align-self: flex-end;
   }
 }
 
