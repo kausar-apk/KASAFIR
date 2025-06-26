@@ -514,31 +514,19 @@ button:hover {
 }
 
 #katalogEditNota button {
-  flex: 1 1 calc(50% - 8px); 
-  min-width: 140%;
-  max-width: 48%;
-  font-size: 0.87rem;
-  padding: 7px 10px;
-  border: 1px solid #e2b974;
-  border-radius: 6px;
-  background: #cfe9bc;
-  color: #2e3b22;
-  box-sizing: border-box;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 38px;
-  text-align: center;
-  word-break: break-word;
+    flex: 1 1 45%;        
+    max-width: 48%;      
+    min-width: 120px;     
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
   #katalogEditNota button {
-    flex: 1 1 calc(50% - 8px);
-    font-size: 0.82rem;
-    padding: 6px 9px;
-    height: 36px;
-    min-width: 120px;
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    justify-content: center; 
   }
 }
 
