@@ -488,7 +488,6 @@ button:hover {
   font-size: 1.08rem;
 }
 
-/* MOBILE: 2 BARIS per barang, tombol hapus pindah ke bawah kanan */
 @media (max-width: 600px) {
   .atas-edit {
     flex-direction: row;
@@ -551,6 +550,12 @@ button:hover {
   }
 }
 
+#katalogEditNota {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
 .katalog-tombol-group {
   display: flex;
   flex-wrap: wrap;
@@ -567,25 +572,26 @@ button:hover {
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  margin-bottom: 4px;
   transition: background 0.15s, color 0.13s;
-}
-
-.katalog-tombol-group button:hover {
-  background: #497154;
-  color: #fffbe8;
+  margin-bottom: 4px;
+  /* Tambahan supaya grow rapi */
+  flex: 1 1 140px;
+  min-width: 110px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Responsive untuk mobile */
 @media (max-width: 540px) {
-  .katalog-tombol-group button {
-    flex: 1 1 45%;
-    min-width: 120px;
-    max-width: 100%;
-    font-size: 0.97rem;
-    padding: 8px 0;
-  }
   .katalog-tombol-group {
     gap: 6px;
+  }
+  .katalog-tombol-group button {
+    flex: 1 1 48%;
+    min-width: 90px;
+    max-width: 100%;
+    font-size: 0.97rem;
+    padding: 10px 0;
+    margin-bottom: 0;
   }
 }
