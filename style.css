@@ -394,18 +394,84 @@ button:hover {
 }
 
 /* Tabel barang di halaman Edit Nota */
-.tabel-edit-barang {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 7px;
-  margin: 8px 0 18px 0;
+#editDaftarBelanja {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 18px 0;
 }
 
-.tabel-edit-barang td {
-  padding: 4px 6px;
-  vertical-align: middle;
-  font-size: 1.07rem;
+.edit-barang-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   background: #fffbe8;
+  border-radius: 7px;
+  margin-bottom: 11px;
+  padding: 7px 8px;
+}
+
+.edit-barang-row .nama-barang {
+  font-weight: 500;
+  color: #497154;
+  min-width: 70px;
+  flex: 1;
+}
+
+.edit-barang-row .jumlah-control {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  justify-content: center;
+}
+
+.edit-barang-row .edit-qty-btn {
+  background: #b0caa0;
+  color: #2e3b22;
+  border: none;
+  border-radius: 5px;
+  width: 34px;
+  height: 34px;
+  font-size: 1.11rem;
+  cursor: pointer;
+  transition: background 0.12s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-barang-row .edit-qty-btn:hover {
+  background: #497154;
+  color: #fffbe8;
+}
+
+.edit-barang-row .jumlah-barang {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.edit-barang-row .harga-barang {
+  min-width: 80px;
+  text-align: right;
+  flex: 1;
+}
+
+.edit-barang-row .hapus-barang-btn {
+  background: #e57373;
+  color: #fffbe8;
+  border: none;
+  border-radius: 7px;
+  padding: 6px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: background 0.15s;
+}
+.edit-barang-row .hapus-barang-btn:hover {
+  background: #b71c1c;
 }
 
 .nama-barang {
@@ -459,10 +525,12 @@ button:hover {
 }
 
 @media (max-width: 500px) {
-  .tabel-edit-barang td {
-    font-size: 0.97rem;
-    padding: 4px 3px;
+  .edit-barang-row {
+    flex-wrap: wrap;
+    font-size: 0.99rem;
+    padding: 6px 4px;
   }
-  .nama-barang, .harga-barang { min-width: 60px; }
-  .hapus-barang-btn { padding: 4px 8px; }
+  .edit-barang-row .harga-barang { min-width: 60px; }
+  .edit-barang-row .hapus-barang-btn { padding: 4px 8px; margin-left: 8px; }
 }
+
