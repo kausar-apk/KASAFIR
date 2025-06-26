@@ -532,14 +532,14 @@ button:hover {
     align-self: flex-end;
     font-size: 0.97rem;
     padding: 6px 16px;
-    width: 20%;
+    width: auto;
   }
   .edit-barang-card {
     padding: 8px 7px 10px 7px;
   }
 
    .bawah-edit {
-    width: 100%;
+    width: auto;
     gap: 8px;
   }
   .bawah-edit .hapus-barang-btn {
