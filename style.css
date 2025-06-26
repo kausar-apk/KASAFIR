@@ -514,11 +514,11 @@ button:hover {
 }
 
 #katalogEditNota button {
-  flex: 1 1 calc(50% - 10px); 
-  min-width: 120%;
-  max-width: 100%;
-  font-size: 0.85rem;
-  padding: 6px 10px;
+  flex: 1 1 calc(50% - 8px); 
+  min-width: 140%;
+  max-width: 48%;
+  font-size: 0.87rem;
+  padding: 7px 10px;
   border: 1px solid #e2b974;
   border-radius: 6px;
   background: #cfe9bc;
@@ -528,12 +528,14 @@ button:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   height: 38px;
+  text-align: center;
+  word-break: break-word;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   #katalogEditNota button {
-    flex: 0 1 calc(50% - 8px);
-    font-size: 0.8rem;
+    flex: 1 1 calc(50% - 8px);
+    font-size: 0.82rem;
     padding: 6px 9px;
     height: 36px;
     min-width: 120px;
