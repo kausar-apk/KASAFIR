@@ -149,6 +149,7 @@ button {
   cursor: pointer;
   transition: background 0.16s, color 0.16s;
 }
+
 button:hover {
   background: #e2b974;
   color: #497154;
@@ -544,5 +545,27 @@ button:hover {
     align-self: flex-end;
     margin-left: auto;
     margin-top: 5px;
+  }
+}
+
+#katalogEditNota {
+  margin-bottom: 20px; 
+}
+
+.katalog-tombol-group {
+  margin-top: 20px; 
+}
+
+.katalog-tombol-group button {
+  margin-bottom: 10px; 
+}
+
+@media (max-width: 600px) {
+  #katalogEditNota {
+    margin-bottom: 30px;
+  }
+
+  .katalog-tombol-group {
+    margin-top: 20px; 
   }
 }
