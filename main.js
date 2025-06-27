@@ -272,6 +272,7 @@ function kurangiEditBarang(idx) {
         editBarang[idx].jumlah--;
     } else {
         editBarang.splice(idx, 1);
+        tampilkanKatalogEdit();
     }
     tampilkanEditDaftarBelanja();
     document.getElementById('editTotalHarga').innerText = hitungTotalEdit();
