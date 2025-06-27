@@ -9,12 +9,12 @@
   "description": "Aplikasi kalkulator belanja.",
   "icons": [
     {
-      "src": "img/icon-mangga-192.png",
+      "src":"img/icon-mangga.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "img/icon-mangga-512.png",
+      "src": "img/icon-mangga.png",
       "sizes": "512x512",
       "type": "image/png"
     }
