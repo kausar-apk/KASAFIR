@@ -4,9 +4,7 @@ const urlsToCache = [
   "style.css",
   "main.js",
   "manifest.json",
-  "img/icon-mangga.png",
-  "img/icon-mangga-192.png", 
-  "img/icon-mangga-512.png"  
+  "img/icon-mangga.png" 
 ];
 
 self.addEventListener("install", event => {
