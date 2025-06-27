@@ -1,8 +1,8 @@
 {
   "name": "KASAFIR - Kalkulator Belanja",
   "short_name": "Kasafir",
-  "start_url": "/",
-  "scope": "./",
+  "start_url": "/KASAFIR",
+  "scope": "./KASAFIR",
   "display": "standalone",
   "background_color": "#f3e1b5",
   "theme_color": "#497154",
