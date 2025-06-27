@@ -119,7 +119,6 @@ function hapusDariKatalog(index) {
     daftarBarang.splice(index, 1);
 
     tampilkanBarang();
-    tampilkanBarang();
     simpanKeStorage();
 }
 
@@ -282,6 +281,8 @@ function hapusEditBarang(idx) {
     editBarang.splice(idx, 1);
     tampilkanEditDaftarBelanja();
     tampilkanKatalogEdit();
+    document.getElementById('editTotalHarga').innerText = hitungTotalEdit();
+
 }
 
 function hitungTotalEdit() {
@@ -334,6 +335,9 @@ function tampilkanKatalogEdit() {
         judul.innerText = kategori;
         container.appendChild(judul);
 
+        let grup = document.createElement("div");
+        grup.className = "katalog-grup";
+
         kelompok[kategori].forEach((barang) => {
             let btn = document.createElement("button");
             btn.textContent = `${barang.nama} (+)`;
@@ -341,8 +345,10 @@ function tampilkanKatalogEdit() {
             btn.onclick = function() {
                 tambahBarangBaruKeEditNota(barang);
             };
-            container.appendChild(btn);
+            grup.appendChild(btn);
         });
+
+        container.appendChild(grup);
     }
 }
 
@@ -355,6 +361,7 @@ function tambahBarangBaruKeEditNota(barang) {
     });
     tampilkanEditDaftarBelanja();
     tampilkanKatalogEdit();
+    document.getElementById('editTotalHarga').innerText = hitungTotalEdit();
 }
 
 function hapusTransaksi(index) {
