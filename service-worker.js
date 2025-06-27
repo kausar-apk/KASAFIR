@@ -1,10 +1,11 @@
 const CACHE_NAME = "kasafir-v1";
 const urlsToCache = [
-  "index.html",
-  "style.css",
-  "main.js",
-  "manifest.json",
-  "img/icon-mangga.png" 
+  "/KASAFIR/"
+  "/KASAFIR/index.html",
+  "/KASAFIR/style.css",
+  "/KASAFIR/main.js",
+  "/KASAFIR/manifest.json",
+  "/KASAFIR/img/icon-mangga.png" 
 ];
 
 self.addEventListener("install", event => {
