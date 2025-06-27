@@ -331,6 +331,9 @@ function tampilkanKatalogEdit() {
     });
 
     for (let kategori in kelompok) {
+        let blok = document.createElement("div");
+        blok.className = "katalog-blok";
+
         let judul = document.createElement("h4");
         judul.innerText = kategori;
         container.appendChild(judul);
@@ -348,7 +351,8 @@ function tampilkanKatalogEdit() {
             grup.appendChild(btn);
         });
 
-        container.appendChild(grup);
+        blok.appendChild(grup)
+        container.appendChild(blok);
     }
 }
 
