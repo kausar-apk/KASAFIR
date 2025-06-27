@@ -510,11 +510,9 @@ button:hover {
   background: #98c379;
   color: #fffbe8;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 6px 10px;
-  margin: 4px 4px 8px 0;
   font-size: 0.9rem;
-  line-height: 1.2;
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
 }
@@ -530,10 +528,15 @@ button:hover {
   gap: 6px;
 }
 
+.katalog-blok {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
 .katalog-grup {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 4px 0 14px 0;
+  gap: 6px;
 }
 
